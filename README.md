@@ -8,11 +8,11 @@
 ## Setup
 1. Clone this repo
 ```sh
-git clone https://github.com/Songssh/Humano.git
+git clone https://github.com/Songssh/inf-stair.git
 ```
 2. Set this repo
 ```
-cd Humano
+cd inf-stair
 ```
 3. Create environment
 ```
