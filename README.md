@@ -57,7 +57,7 @@ keys = ['q', 'e']
 ![](./assets/key.png)
 
 ## Train
-### [WARNING] Turn your **WIFI** off, ads might disturb traning.
+[WARNING] Turn your **WIFI** off, ads might disturb your traning.
 ```
 python train.py
 ```
