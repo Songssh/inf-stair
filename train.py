@@ -1,15 +1,15 @@
 import numpy as np
 import tensorflow as tf
 import time
-import os
 
-from env import Gym
-import rlmodel
-
+from utils.env import Gym
+from model import rlmodel
 import hparams as hp
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 model = rlmodel.RLModel()
-model.load_weights(hp.checkpoint_dir)
+if hp.use_ckpt:
+    print(f"loaded: {hp.checkpoint_dir}")
+    model.load_weights(hp.checkpoint_dir)
 optimizer = rlmodel.optimizer
 
 env = Gym()
@@ -71,6 +71,7 @@ for i in range(hp.max_episode):
         grads = tape.gradient(loss_value, model.trainable_variables)
         optimizer.apply_gradients(zip(grads, model.trainable_variables))
 
+    #model.save_weights(hp.checkpoint_dir+ f"_{i}")
     model.save_weights(hp.checkpoint_dir)
     print("checkpoint was saved")
 
