@@ -39,7 +39,8 @@ class Stair:
     @staticmethod
     def press_key(key:int, encode=hp.keys):
         #return pgi.press(encode[key])
-        return keyboard.press_and_release(encode[key])
+        #return keyboard.press_and_release(encode[key])
+        return keyboard.send(encode[key])
 
     @staticmethod
     def transform(key:int, state:bool)->int:
@@ -83,19 +84,18 @@ class Gym(Stair):
         return observation
 
     def start(self):
-        sleep(2)
         self.score = 0
         self.state = True
-        sleep(1)
+        sleep(3)
         self.press_key(1)
-        sleep(0.3)
+        sleep(0.5)
         observation = self.pixels(hp.stair_x, hp.stair_y)
         return observation, False
 
     def step(self, action):
         key = action
         self.press_key(key)
-        #sleep(0.005)
+        sleep(0.05)
         if key == 0:
             self.state = not self.state
 
