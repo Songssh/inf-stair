@@ -30,8 +30,6 @@ class RLModel(tf.keras.Model):
         self.dense3 = tf.keras.layers.Dense(units=128, activation='relu')
         self.dense4 = tf.keras.layers.Dense(units=64, activation='relu')
         self.dense5 = tf.keras.layers.Dense(units=32, activation='relu')
-        # 출력 유닛의 수를 2로 설정하고 softmax 활성화 함수를 사용
-        # 이렇게 하면 모델의 출력은 각 클래스(0과 1)에 대한 확률을 나타냅니다.
         self.output_layer = tf.keras.layers.Dense(units=2, activation='softmax')
 
     def call(self, inputs):
