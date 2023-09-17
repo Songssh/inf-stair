@@ -3,7 +3,7 @@
 
 ## Requirements
 - Python
-- App player (tested bluestack)
+- App player **(tested on bluestack)**
 
 ## Setup
 1. Clone this repo
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ## Edit parameters
 1. run **utils/get_position.py**
-[](./assets/stair.png)
+[](assets/stair.png)
 2. open **hparams.py** and edit
 ```
 stair_x = 132 #
@@ -54,7 +54,7 @@ end_rgb = (204,  34,  34)
 keys = ['q', 'e']
 ```
 3. make floating buttons
-[](./assets/key.png)
+[](assets/key.png)
 
 ## Train
 ### [WARNING] Turn your **WIFI** off, ads might disturb traning.
