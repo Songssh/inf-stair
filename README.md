@@ -71,6 +71,6 @@ python run.py
 ```
 
 ## Tutorial video
-You can find tutorial video [here](https://).
+You can find tutorial video [here]([https://](https://youtu.be/Sm51kj2WZvc)https://youtu.be/Sm51kj2WZvc).
 
 ## Note
